@@ -1,0 +1,28 @@
+<div class="container rounded text-center">
+  <div class="row justify-content-center">
+    <div class="col">
+      <img [src]="user.image" alt="" srcset="" />
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col bg-dark text-light p-2">
+      <h1 class="title">Hello {{ user.firstName }}</h1>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col bg-light p-2">Age : {{ user.age }}</div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col bg-dark text-light fst-italic p-2">{{ user.quote }}</div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col p-2 ">
+      <input class= "rounded w-100 bg-dark text-light" [(ngModel)]="user.quote" type="text" />
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col p-2">
+      <button class = "btn btn-secondary text-dark fw-bold w-50" (click)="user.reset()" type="submit">RESET</button>
+    </div>
+  </div>
+</div>
